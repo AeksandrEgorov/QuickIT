@@ -2446,6 +2446,24 @@ input:checked + .toggle-bg {
   }
 }
 
+/* Tablets + small laptops */
+@media (max-width: 1024px) {
+  .section {
+    margin-top: 100px;
+  }
+}
+
+
 .pages {
   margin-left: 10%;
 }
+
+
+.section-cards {
+  margin-bottom: 70px;
+}
+
+.cards {
+  margin: 20px;
+}
+
