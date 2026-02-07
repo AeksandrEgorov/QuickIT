@@ -2459,25 +2459,30 @@ input:checked + .toggle-bg {
   }
 }
 
-.main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 100px;
-}
-
-
 .pages {
   margin-left: 10%;
 }
-
 
 .cards {
   margin: 20px;
 }
 
-.footer {
-  position: fixed; 
-  bottom: 0%; 
-  width: 100%;
+html, body {
+  height: 100% !important;
+}
+
+body {
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+main {
+  flex: 1 0 auto !important;
+  margin-bottom: 50px;
+}
+
+footer {
+  margin-top: auto !important;
+  position: static !important;
 }
