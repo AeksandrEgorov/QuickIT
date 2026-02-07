@@ -2451,6 +2451,19 @@ input:checked + .toggle-bg {
   .section {
     margin-top: 100px;
   }
+  .pages {
+    margin-left: 0% !important;
+  }
+  .section-cards {
+    margin-top: 30px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 
 
@@ -2459,11 +2472,12 @@ input:checked + .toggle-bg {
 }
 
 
-.section-cards {
-  margin-bottom: 70px;
-}
-
 .cards {
   margin: 20px;
 }
 
+.footer {
+  position: fixed; 
+  bottom: 0%; 
+  width: 100%;
+}
