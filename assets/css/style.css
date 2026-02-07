@@ -2446,6 +2446,43 @@ input:checked + .toggle-bg {
   }
 }
 
+/* Tablets + small laptops */
+@media (max-width: 1024px) {
+  .section {
+    margin-top: 100px;
+  }
+  .pages {
+    margin-left: 0% !important;
+  }
+  .section-cards {
+    margin-top: 30px;
+  }
+}
+
 .pages {
   margin-left: 10%;
+}
+
+.cards {
+  margin: 20px;
+}
+
+html, body {
+  height: 100% !important;
+}
+
+body {
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+main {
+  flex: 1 0 auto !important;
+  margin-bottom: 50px;
+}
+
+footer {
+  margin-top: auto !important;
+  position: static !important;
 }
