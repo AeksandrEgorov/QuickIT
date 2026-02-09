@@ -2503,6 +2503,27 @@ footer {
   position: static !important;
 }
 
+.contact-card {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-list {
+  padding-left: 24px;
+  text-align: left;
+}
+
+.contact-list-li {
+  margin-bottom: 8px;
+}
+
+.form {
+  max-width: 800px;
+  width: 100%;
+  margin: 20px 0px;
+}
+
 /* Tablets + small laptops */
 @media (max-width: 1024px) {
   .section {
