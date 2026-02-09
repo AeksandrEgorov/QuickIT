@@ -23,11 +23,12 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 <body class="min-h-screen flex flex-col">
+    <!-- header -->
     <header class="fixed w-full z-20">
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex flex-wrap items-center mx-auto px-4 py-2.5">
                 <!-- Logo -->
-                <a href="./index.html" class="flex items-center">
+                <a href="../index.html" class="flex items-center">
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">QuickIT</span>
                 </a>
 
@@ -67,54 +68,58 @@
             </div>
         </nav>
     </header>
-    <!-- Main content (IMPORTANT: padding-top to avoid header overlap) -->
-    <main class="flex-1 pt-20">
-        <div class="max-w-screen-xl mx-auto px-4 py-8">
-             <!-- PAGE CONTENT GOES HERE -->
+    <!-- Header end block -->
+
+    <!-- Main content -->
+    <main class="flex-1 pt-20 flex">
+        <div class="max-w-screen-xl mx-auto px-4 py-8 flex items-center flex-col">
             <div class="text-center">
-                <h2 class="mb-2 text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl dark:text-white">
+                <h2 class="mb-2 text-4xl font-extrabold tracking-tight text-gray-900 md:text-4xl dark:text-white">
                     Our Services
                 </h2>
             </div>
-            <div class="p-6 bg-white border-3 border-purple rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cards">
-                <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Web development</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
+            <div class="p-6 bg-white border-3 border-purple rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 services-cards">
+                <h3 class="mb-2 text-2xl font-semibold text-gray-900 dark:text-white">Web development</h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">
                     QuickIT provides professional web development services for businesses of all sizes.
                     We design and build secure, responsive and high-performance websites, including corporate pages, landing pages, and e-commerce platforms.
                     Our solutions are optimized for speed, usability and scalability to ensure long-term reliability.
                 </p>
             </div>
-            <div class="p-6 bg-white border-3 border-red rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cards">
-                <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Mobile Application Development</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
+            <div class="p-6 bg-white border-3 border-red rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 services-cards">
+                <h3 class="mb-2 text-2xl font-semibold text-gray-900 dark:text-white">Mobile Application Development</h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">
                     We develop modern mobile applications for iOS and Android platforms.
                     Our mobile solutions help businesses reach their customers more effectively and improve service accessibility.
                     Each application is designed with a focus on performance, security and user experience.
                 </p>
             </div>
-            <div class="p-6 bg-white border-3 border-yellow rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cards">
-                <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Business Process Automation</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
+            <div class="p-6 bg-white border-3 border-yellow rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 services-cards">
+                <h3 class="mb-2 text-2xl font-semibold text-gray-900 dark:text-white">Business Process Automation</h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">
                     QuickIT helps companies streamline their operations through digital automation.
                     We create custom systems such as CRM platforms, customer portals and order management solutions that reduce manual work and increase efficiency.
                 </p>
             </div>
-            <div class="p-6 bg-white border-3 border-green rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cards">
-                <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Cybersecurity services</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
+            <div class="p-6 bg-white border-3 border-green rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 services-cards">
+                <h3 class="mb-2 text-2xl font-semibold text-gray-900 dark:text-white">Cybersecurity services</h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">
                     We provide comprehensive cybersecurity services to protect digital systems and sensitive data.
                     Our services include website and server security, vulnerability assessments, and data protection solutions to ensure safe and reliable IT environments.
                 </p>
             </div>
-            <div class="p-6 bg-white border-3 border-blue-600 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cards">
-                <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">UI / UX Design</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
+            <div class="p-6 bg-white border-3 border-blue-600 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 services-cards">
+                <h3 class="mb-2 text-2xl font-semibold text-gray-900 dark:text-white">UI / UX Design</h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">
                     Our design team creates clean and intuitive user interfaces that enhance user interaction.
                     We focus on usability, accessibility and visual consistency to ensure a professional and engaging digital experience.
                 </p>
             </div>
         </div>
     </main>
+    <!-- Main content end block -->
+
+    <!-- Footer -->
     <footer class="mt-auto bg-gray-100 border-t border-gray-200 footer">
         <div class="max-w-screen-xl mx-auto px-4 py-6 text-center">
         <p class="text-sm text-gray-500">
@@ -125,6 +130,8 @@
         </p>
         </div>
     </footer>
+    <!-- Footer end block -->
+
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
 </body>
 </html>
