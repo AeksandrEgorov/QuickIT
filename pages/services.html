@@ -19,7 +19,7 @@
     <!-- Favicon -->
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -45,14 +45,17 @@
                 <div class="pages hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                     <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 lg:ml-24">
                     <li>
-                        <a href="./index.html" class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white" aria-current="page">
+                        <a href="../index.html" 
+                        class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0
+                        lg:hover:text-purple-700 lg:p-0 dark:text-gray-400">
                         Home
-                        </a>
+                    </a>
                     </li>
                     <li>
-                        <a href="./pages/services.html" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                        <a href="./services.html" class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded
+                        lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"aria-current="page">
                         Services
-                        </a>
+                    </a>
                     </li>
                     <li>
                         <a href="./pages/contacts.html" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
@@ -68,41 +71,57 @@
     <main class="flex-1 pt-20">
         <div class="max-w-screen-xl mx-auto px-4 py-8">
              <!-- PAGE CONTENT GOES HERE -->
-            <h1 class="text-3xl font-bold mb-4">Our Services</h1>
-            <h2 class="text-1xl font-bold mb-4">Web development</h2>
-            <p class="text-gray-700 dark:text-gray-300">
-                QuickIT provides professional web development services for businesses of all sizes.
-                We design and build secure, responsive and high-performance websites, including corporate pages, landing pages, and e-commerce platforms.
-                Our solutions are optimized for speed, usability and scalability to ensure long-term reliability.
-            </p>
-            <h2 class="text-1xl font-bold mb-4">Mobile Application Development</h2>
-            <p class="text-gray-700 dark:text-gray-300">
-                We develop modern mobile applications for iOS and Android platforms.
-                Our mobile solutions help businesses reach their customers more effectively and improve service accessibility.
-                Each application is designed with a focus on performance, security and user experience.
-            </p>
-            <h2 class="text-1xl font-bold mb-4">Business Process Automation</h2>
-            <p class="text-gray-700 dark:text-gray-300">
-                QuickIT helps companies streamline their operations through digital automation.
-                We create custom systems such as CRM platforms, customer portals and order management solutions that reduce manual work and increase efficiency.
-            </p>
-            <h2 class="text-1xl font-bold mb-4">Cybersecurity services</h2>
-            <p class="text-gray-700 dark:text-gray-300">
-                We provide comprehensive cybersecurity services to protect digital systems and sensitive data.
-                Our services include website and server security, vulnerability assessments, and data protection solutions to ensure safe and reliable IT environments.
-            </p>
-            <h2 class="text-1xl font-bold mb-4">UI / UX Design</h2>
-            <p class="text-gray-700 dark:text-gray-300">
-                Our design team creates clean and intuitive user interfaces that enhance user interaction.
-                We focus on usability, accessibility and visual consistency to ensure a professional and engaging digital experience.
-            </p>
+            <div class="text-center">
+                <h2 class="mb-2 text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl dark:text-white">
+                    Our Services
+                </h2>
+            </div>
+            <div class="p-6 bg-white border-3 border-purple rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cards">
+                <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Web development</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                    QuickIT provides professional web development services for businesses of all sizes.
+                    We design and build secure, responsive and high-performance websites, including corporate pages, landing pages, and e-commerce platforms.
+                    Our solutions are optimized for speed, usability and scalability to ensure long-term reliability.
+                </p>
+            </div>
+            <div class="p-6 bg-white border-3 border-red rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cards">
+                <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Mobile Application Development</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                    We develop modern mobile applications for iOS and Android platforms.
+                    Our mobile solutions help businesses reach their customers more effectively and improve service accessibility.
+                    Each application is designed with a focus on performance, security and user experience.
+                </p>
+            </div>
+            <div class="p-6 bg-white border-3 border-yellow rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cards">
+                <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Business Process Automation</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                    QuickIT helps companies streamline their operations through digital automation.
+                    We create custom systems such as CRM platforms, customer portals and order management solutions that reduce manual work and increase efficiency.
+                </p>
+            </div>
+            <div class="p-6 bg-white border-3 border-green rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cards">
+                <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Cybersecurity services</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                    We provide comprehensive cybersecurity services to protect digital systems and sensitive data.
+                    Our services include website and server security, vulnerability assessments, and data protection solutions to ensure safe and reliable IT environments.
+                </p>
+            </div>
+            <div class="p-6 bg-white border-3 border-blue-600 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cards">
+                <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">UI / UX Design</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                    Our design team creates clean and intuitive user interfaces that enhance user interaction.
+                    We focus on usability, accessibility and visual consistency to ensure a professional and engaging digital experience.
+                </p>
+            </div>
         </div>
     </main>
-
-    <footer class="mt-auto bg-gray-100 border-t border-gray-200">
+    <footer class="mt-auto bg-gray-100 border-t border-gray-200 footer">
         <div class="max-w-screen-xl mx-auto px-4 py-6 text-center">
         <p class="text-sm text-gray-500">
             © 2026 QuickIT. All rights reserved.
+        </p>
+        <p class="text-sm text-gray-500">
+            Aleksandr Egorov, Ilja Sizonenko EDTR41.
         </p>
         </div>
     </footer>

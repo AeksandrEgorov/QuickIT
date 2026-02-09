@@ -1426,6 +1426,10 @@ input:checked + .toggle-bg {
   border-width: 1px;
 }
 
+.border-3 {
+  border-width: 3px;
+}
+
 .border-0 {
   border-width: 0px;
 }
@@ -1461,6 +1465,26 @@ input:checked + .toggle-bg {
 .border-blue-600 {
   --tw-border-opacity: 1;
   border-color: rgb(28 100 242 / var(--tw-border-opacity));
+}
+
+.border-purple {
+  --tw-border-opacity: 1;
+  border-color: rgb(174 0 255 / var(--tw-border-opacity));
+}
+
+.border-green {
+  --tw-border-opacity: 1;
+  border-color: rgb(58 246 83 / var(--tw-border-opacity));
+}
+
+.border-yellow {
+  --tw-border-opacity: 1;
+  border-color: rgb(240 248 0 / var(--tw-border-opacity));
+}
+
+.border-red {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 47 0 / var(--tw-border-opacity))
 }
 
 .bg-white {
