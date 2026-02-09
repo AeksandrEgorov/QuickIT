@@ -1,33 +1,29 @@
 <!DOCTYPE html>
- <html lang="en">
+<html lang="en">
 <head>
-    <link rel="canonical" href="https://https://demo.themesberg.com/landwind/" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickIT</title>
+    <title>QuickIT - Contacts</title>
 
     <!-- Meta SEO -->
-    <meta name="title" content="QuickIT - IT teenused">
-    <meta name="description" content="Get started with a free and open-source landing page built with Tailwind CSS and the Flowbite component library.">
-    <meta name="robots" content="index, follow">
+    <meta name="title" content="QuickIT">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <meta name="author" content="Themesberg">
 
 
     <!-- Favicon -->
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
     <link href="../assets/css/style.css" rel="stylesheet">
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- EmailJS (SDK) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
+
 <body class="min-h-screen flex flex-col">
     <header class="fixed w-full z-20">
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex flex-wrap items-center mx-auto px-4 py-2.5">
                 <!-- Logo -->
-                <a href="./index.html" class="flex items-center">
+                <a href="../index.html" class="flex items-center">
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">QuickIT</span>
                 </a>
 
@@ -66,15 +62,121 @@
             </div>
         </nav>
     </header>
-    <!-- Main content (IMPORTANT: padding-top to avoid header overlap) -->
-    <main class="flex-1 pt-20">
-        <div class="max-w-screen-xl mx-auto px-4 py-8">
-             <!-- PAGE CONTENT GOES HERE -->
-            <div class="text-center">
-                <h2 class="mb-2 text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl dark:text-white">
-                    How to contact us?
-                </h2>
+
+  <main class="bg-white dark:bg-gray-900 flex-1">
+    <section class="max-w-screen-xl mx-auto px-4 pt-24 pb-12 lg:pt-28 section">
+        <div class="text-center">
+            <h1 class="mb-2 text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl dark:text-white">
+            Contact us
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-500 md:text-lg dark:text-gray-400">
+            Send us a message and we’ll get back to you.
+            </p>
+        </div>
+
+        <!--form -->
+        <div class="mt-10 flex justify-center">
+            <div class="form max-w-xl">
+                <div class="p-6 sm:p-8 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                    <!-- id="contact-form" used by EmailJS sendForm -->
+                    <form id="contact-form" class="space-y-5">
+                    <!-- EmailJS attributes
+                        {{from_name}}, {{reply_to}}, {{subject}}, {{topic}}, {{message}} etc.
+                    -->
+                    <div>
+                        <label for="from_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your name</label>
+                        <input
+                        type="text"
+                        id="from_name"
+                        name="from_name"
+                        placeholder="Ivan Ivanov"
+                        required
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="reply_to" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                        <input
+                        type="email"
+                        id="reply_to"
+                        name="reply_to"
+                        placeholder="name@example.com"
+                        required
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="topic" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Topic</label>
+                        <select
+                        id="topic"
+                        name="topic"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                        >
+                            <option value="Web development">Web development</option>
+                            <option value="Mobile Application Development">Mobile Application Development</option>
+                            <option value="Business Process Automation">Business Process Automation</option>
+                            <option value="Cybersecurity services">Cybersecurity services</option>
+                            <option value="UI / UX Design">UI / UX Design</option>         
+                            <option value="Other">Other</option>             
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Subject</label>
+                        <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Example: Need a website for my business"
+                        required
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
+                        <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Describe your request..."
+                        required
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                        ></textarea>
+                    </div>
+
+                    <input type="hidden" name="page_url" id="page_url" value="" />
+                    <input type="hidden" name="sent_at" id="sent_at" value="" />
+
+                    <div class="flex items-start gap-2">
+                        <input
+                        id="privacy"
+                        name="privacy"
+                        type="checkbox"
+                        required
+                        class="w-4 h-4 mt-1 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label for="privacy" class="text-sm text-gray-500 dark:text-gray-400">
+                        I agree to be contacted back about this request.
+                        </label>
+                    </div>
+
+                    <button
+                        id="submit-btn"
+                        type="submit"
+                        class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
+                    >
+                        Send message
+                    </button>
+
+                    <!-- Status text (success/error) -->
+                    <p id="form-status" class="text-sm text-center text-gray-500 dark:text-gray-400"></p>
+                    </form>
+                </div>
             </div>
+        </div>
             <div class="p-6 bg-white border-3 rounded-lg shadow-sm dark:bg-gray-800 cards contact-card">
                 <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">
                     If you have any questions, we are ready to help you.
@@ -86,8 +188,10 @@
                     <li>Kohtla-Järve, Järveküla tee 75</li>
                 </ul>
             </div>
-        </div>
+        </section>        
     </main>
+
+
     <footer class="mt-auto bg-gray-100 border-t border-gray-200 footer">
         <div class="max-w-screen-xl mx-auto px-4 py-6 text-center">
         <p class="text-sm text-gray-500">
@@ -98,6 +202,61 @@
         </p>
         </div>
     </footer>
-    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+
+<script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+
+    <script>
+    const EMAILJS_PUBLIC_KEY  = "qQmp7eRqb-W78QDZO";
+    const EMAILJS_SERVICE_ID  = "service_j0j7z1a";
+    const EMAILJS_TEMPLATE_ID = "template_l4roo8e";
+
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+    const form      = document.getElementById("contact-form");
+    const statusEl  = document.getElementById("form-status");
+    const submitBtn = document.getElementById("submit-btn");
+
+    function fillHidden() {
+        document.getElementById("page_url").value = window.location.href;
+        document.getElementById("sent_at").value  = new Date().toISOString();
+    }
+
+    fillHidden();
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        fillHidden(); // ensure fresh timestamp
+
+        statusEl.textContent = "";
+        submitBtn.disabled = true;
+        submitBtn.classList.add("opacity-70", "cursor-not-allowed");
+        submitBtn.textContent = "Sending...";
+
+        try {
+        await emailjs.sendForm(
+            EMAILJS_SERVICE_ID,
+            EMAILJS_TEMPLATE_ID,
+            form,
+            { publicKey: EMAILJS_PUBLIC_KEY }
+        );
+
+        statusEl.textContent = "✅ Message sent! We will contact you soon.";
+        statusEl.className = "text-sm text-center text-green-600 dark:text-green-400";
+
+        form.reset();
+        fillHidden();
+        } catch (err) {
+        statusEl.textContent = "❌ Failed to send. Please try again later.";
+        statusEl.className = "text-sm text-center text-red-600 dark:text-red-400";
+        console.error("EmailJS error:", err);
+        } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove("opacity-70", "cursor-not-allowed");
+        submitBtn.textContent = "Send message";
+        }
+    });
+    </script>
+
 </body>
 </html>
